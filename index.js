@@ -27,12 +27,10 @@ app.engine('jsx', reactEngine);
 
 app.get('/', (req, res) => {
   // running this will let express to run home.handlebars file in your views folder
-  res.render('home')
+  res.render('application')
 })
 
-
-
-
+//app.get('/', myModule.rootPath);
 
 
 
