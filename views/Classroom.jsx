@@ -15,29 +15,108 @@ class Content extends React.Component {
             <img src="greenbutton.png" />
           </figure>
         </div>
+
         <div class="column">
           <div class="box">
-            <div class="content">
-              <h1>Questions</h1>
-              <ul>
-                <li>This</li>
-                <li>is</li>
-                <li>where</li>
-                <li>people</li>
-                <li>put</li>
-                <li>their</li>
-                <li>questions</li>
-                <li>post</li>
-                <li>request</li>
-                <li>puts</li>
-                <li>the</li>
-                <li>question</li>
-                <li>here</li>
-              </ul>
+            <h1 class="is-size-3">Questions</h1>
+            <br />
+
+            <div class="box">
+              <article class="media">
+                <figure class="media-left">
+                  <p>
+                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-up"></i></div>
+                  </p>
+                  <p>
+                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-down"></i></div>
+                  </p>
+                </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <nav class="level is-mobile">
+                        <div class="level-left">
+                          <p>
+                            This is a question that someone is asking.
+                          <br />
+                          <small><a class="has-text-info">3 answers</a> · <a class="has-text-info">1 followup</a></small>
+                          </p>
+                        </div>
+                      </nav>    
+                    </div>
+                  </div>
+                <div class="media-right">
+                  <button class="delete"></button>
+                </div>
+              </article>
             </div>
+
+
+
+
+            <div class="box">
+              <article class="media">
+                <figure class="media-left">
+                  <p>
+                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-up"></i></div>
+                  </p>
+                  <p>
+                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-down"></i></div>
+                  </p>
+                </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <nav class="level is-mobile">
+                        <div class="level-left">
+                          <p>
+                            This is a question that someone is asking.
+                          <br />
+                          <small><a class="has-text-info">1 answer</a> · <a class="has-text-info">3 followups</a></small>
+                          </p>
+                        </div>
+                      </nav>    
+                    </div>
+                  </div>
+                <div class="media-right">
+                  <button class="delete"></button>
+                </div>
+              </article>
+            </div>
+
+            <div class="box">
+              <article class="media">
+                <figure class="media-left">
+                  <p>
+                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-up"></i></div>
+                  </p>
+                  <p>
+                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-down"></i></div>
+                  </p>
+                </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <nav class="level is-mobile">
+                        <div class="level-left">
+                          <p>
+                            This is a question that someone is asking.
+                          <br />
+                          <small><a class="has-text-info">0 answers</a> · <a class="has-text-info">0 followups</a></small>
+                          </p>
+                        </div>
+                      </nav>    
+                    </div>
+                  </div>
+                <div class="media-right">
+                  <button class="delete"></button>
+                </div>
+              </article>
+            </div>
+
+
             <div class="control">
               <textarea class="textarea" type="text" placeholder="type in your question"></textarea>
             </div>
+
+
           </div>
         </div>
       </div>
