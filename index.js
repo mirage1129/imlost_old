@@ -19,7 +19,6 @@ app.use(cookieParser());
 require('./Routes')(app);
 
 const Classroom = require('./ModelClassroom');
-const Task = require('./ModelTask');
 
 app.get('/', (request, response) => {
   response.render('Home');

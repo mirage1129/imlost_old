@@ -1,6 +1,6 @@
 var React = require("react");
 
-class LoginForm extends React.Component {
+class LoginFormOne extends React.Component {
   render() {
     return(
     <form action="/" method="POST">
@@ -17,25 +17,31 @@ class LoginForm extends React.Component {
           </div>
         </div>
       </div>
-      
-      <div className="columns">
-        <div className="column is-one-third is-offset-one-third">
-  
-          <div className="field has-addons">
-            <div className="control">
-              <input name="join" className="input has-text-centered" type="text" placeholder="type class name" />
-            </div>
-            <p className="control has-text-centered">
-               <button className="button is-info is-inverted">join a class</button>
-            </p>
-          </div>
-
-        </div>
-      </div>
     </form>
-    )
-  }
+  )}
 }
+
+class LoginFormTwo extends React.Component {
+  render() {
+    return(
+      <form action="/youare" method="GET">
+        <div className="columns">
+          <div className="column is-one-third is-offset-one-third">
+    
+            <div className="field has-addons">
+              <div className="control">
+                <input name="inclass" className="input has-text-centered" type="text" placeholder="type class name" />
+              </div>
+              <p className="control has-text-centered">
+                 <button className="button is-info is-inverted">join a class</button>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </form>
+    )}
+  }
 
 class Home extends React.Component {
   render() {
@@ -47,7 +53,7 @@ class Home extends React.Component {
         </head>
         
         <body className="has-background-primary">  
-          <section className="hero is-info is-large">
+          <section className="hero is-info is-fullheight">
             <div className="hero-head">
               <nav className="navbar">
                 <div className="container">
@@ -65,9 +71,12 @@ class Home extends React.Component {
               </nav>
             </div>
             <div className="hero-body">
-              <div className="container has-text-centered">
-                <LoginForm />
+              <div className="container">
+                <LoginFormOne />
+                <LoginFormTwo />
               </div>
+            </div>
+            <div className="hero-foot">
             </div>
           </section>
         </body>

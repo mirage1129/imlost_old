@@ -17,5 +17,5 @@ function create(name, callback) {
 
 module.exports = {
   find,
-  create,
+  create
 }

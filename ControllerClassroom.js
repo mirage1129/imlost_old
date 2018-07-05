@@ -14,7 +14,6 @@ function create(request, response) {
 }
 
 
-
 function find(req, res) {
     let classname = req.params.classname;
     
@@ -30,7 +29,24 @@ function find(req, res) {
 }
 
 
+function join(req, res) {
+    let classname = req.query.inclass;
+    console.log(classname);
+    console.log(req.query);
+    function callback(err, result) {
+        if (result.rows.length > 0) {
+            res.render('Classroom')
+        } else {
+            res.redirect('/');
+        }
+    }
+    
+    Classroom.find(classname, callback);
+}
+
+
 module.exports = {
   create,
-  find
+  find,
+  join
 }

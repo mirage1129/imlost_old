@@ -4,48 +4,48 @@ class Content extends React.Component {
   render() {
     return(
 
-      <div class="columns is-vcentered">
-        <div class="column is-3">
-          <figure class="image is-128x128">
+      <div className="columns is-vcentered">
+        <div className="column is-3">
+          <figure className="image is-128x128">
             <img src="redbutton.png" />
           </figure>
         </div>
-        <div class="column is-3">
-          <figure class="image is-128x128">
+        <div className="column is-3">
+          <figure className="image is-128x128">
             <img src="greenbutton.png" />
           </figure>
         </div>
 
-        <div class="column">
-          <div class="box">
-            <h1 class="is-size-3">Questions</h1>
+        <div className="column">
+          <div className="box">
+            <h1 className="is-size-3">Questions</h1>
             <br />
 
-            <div class="box">
-              <article class="media">
-                <figure class="media-left">
+            <div className="box">
+              <article className="media">
+                <figure className="media-left">
                   <p>
-                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-up"></i></div>
+                    <div className="icon is-small has-text-info"><i className="fas fa-arrow-up"></i></div>
                   </p>
                   <p>
-                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-down"></i></div>
+                    <div className="icon is-small has-text-info"><i className="fas fa-arrow-down"></i></div>
                   </p>
                 </figure>
-                  <div class="media-content">
-                    <div class="content">
-                      <nav class="level is-mobile">
-                        <div class="level-left">
+                  <div className="media-content">
+                    <div className="content">
+                      <nav className="level is-mobile">
+                        <div className="level-left">
                           <p>
                             This is a question that someone is asking.
                           <br />
-                          <small><a class="has-text-info">3 answers</a> · <a class="has-text-info">1 followup</a></small>
+                          <small><a className="has-text-info">3 answers</a> · <a className="has-text-info">1 followup</a></small>
                           </p>
                         </div>
                       </nav>    
                     </div>
                   </div>
-                <div class="media-right">
-                  <button class="delete"></button>
+                <div className="media-right">
+                  <button className="delete"></button>
                 </div>
               </article>
             </div>
@@ -53,67 +53,67 @@ class Content extends React.Component {
 
 
 
-            <div class="box">
-              <article class="media">
-                <figure class="media-left">
+            <div className="box">
+              <article className="media">
+                <figure className="media-left">
                   <p>
-                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-up"></i></div>
+                    <div className="icon is-small has-text-info"><i className="fas fa-arrow-up"></i></div>
                   </p>
                   <p>
-                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-down"></i></div>
+                    <div className="icon is-small has-text-info"><i className="fas fa-arrow-down"></i></div>
                   </p>
                 </figure>
-                  <div class="media-content">
-                    <div class="content">
-                      <nav class="level is-mobile">
-                        <div class="level-left">
+                  <div className="media-content">
+                    <div className="content">
+                      <nav className="level is-mobile">
+                        <div className="level-left">
                           <p>
                             This is a question that someone is asking.
                           <br />
-                          <small><a class="has-text-info">1 answer</a> · <a class="has-text-info">3 followups</a></small>
+                          <small><a className="has-text-info">1 answer</a> · <a className="has-text-info">3 followups</a></small>
                           </p>
                         </div>
                       </nav>    
                     </div>
                   </div>
-                <div class="media-right">
-                  <button class="delete"></button>
+                <div className="media-right">
+                  <button className="delete"></button>
                 </div>
               </article>
             </div>
 
-            <div class="box">
-              <article class="media">
-                <figure class="media-left">
+            <div className="box">
+              <article className="media">
+                <figure className="media-left">
                   <p>
-                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-up"></i></div>
+                    <div className="icon is-small has-text-info"><i className="fas fa-arrow-up"></i></div>
                   </p>
                   <p>
-                    <div class="icon is-small has-text-info"><i class="fas fa-arrow-down"></i></div>
+                    <div className="icon is-small has-text-info"><i className="fas fa-arrow-down"></i></div>
                   </p>
                 </figure>
-                  <div class="media-content">
-                    <div class="content">
-                      <nav class="level is-mobile">
-                        <div class="level-left">
+                  <div className="media-content">
+                    <div className="content">
+                      <nav className="level is-mobile">
+                        <div className="level-left">
                           <p>
                             This is a question that someone is asking.
                           <br />
-                          <small><a class="has-text-info">0 answers</a> · <a class="has-text-info">0 followups</a></small>
+                          <small><a className="has-text-info">0 answers</a> · <a className="has-text-info">0 followups</a></small>
                           </p>
                         </div>
                       </nav>    
                     </div>
                   </div>
-                <div class="media-right">
-                  <button class="delete"></button>
+                <div className="media-right">
+                  <button className="delete"></button>
                 </div>
               </article>
             </div>
 
 
-            <div class="control">
-              <textarea class="textarea" type="text" placeholder="type in your question"></textarea>
+            <div className="control">
+              <textarea className="textarea" type="text" placeholder="type in your question"></textarea>
             </div>
 
 
@@ -133,25 +133,24 @@ class Home extends React.Component {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
           <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         </head>
-        
         <body className="has-background-info">  
-          <section class="hero is-info is-fullheight">
-            <div class="hero-head">
-              <header class="navbar">
-                <div class="container">
-                  <div class="navbar-brand">
-                    <a class="navbar-item">
+          <section className="hero is-info is-fullheight">
+            <div className="hero-head">
+              <header className="navbar">
+                <div className="container">
+                  <div className="navbar-brand">
+                    <a className="navbar-item">
                       <img src="compass.jpg" alt="Logo" />
                     </a>
-                    <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                    <span className="navbar-burger burger" data-target="navbarMenuHeroC">
                       <span></span>
                       <span></span>
                       <span></span>
                     </span>
                   </div>
-                  <div id="navbarMenuHeroC" class="navbar-menu">
-                    <div class="navbar-end">
-                      <a class="navbar-item">
+                  <div id="navbarMenuHeroC" className="navbar-menu">
+                    <div className="navbar-end">
+                      <a className="navbar-item">
                         Admin
                       </a>
                     </div>
@@ -164,6 +163,8 @@ class Home extends React.Component {
               <div className="container">
                 <Content />
               </div>
+            </div>
+            <div className="hero-foot">
             </div>
           </section>
         </body>
