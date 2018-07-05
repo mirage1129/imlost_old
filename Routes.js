@@ -1,10 +1,13 @@
-const user = require('./ControllerUser');
+const classroom = require('./ControllerClassroom');
 
 function setupRoutes(app) {
-  app.get('/users/register', user.getRegistrationForm);
-  app.post('/users/new', user.create);
-  app.post('/users/login', user.login);
-  app.get('/users/logout', user.logout);
+  app.post('/', classroom.create);
+
+	app.get('/classroom', (request, response) => {
+  response.render('Classroom');
+});
+
+
 };
 
 module.exports = setupRoutes;
