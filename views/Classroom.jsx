@@ -6,13 +6,15 @@ class Content extends React.Component {
 
       <div className="columns is-vcentered">
         <div className="column is-3">
-          <figure className="image is-128x128">
-            <img src="redbutton.png" />
+          <figure className="image">
+           <div className="lostbuttons red">
+           </div>
           </figure>
         </div>
         <div className="column is-3">
-          <figure className="image is-128x128">
-            <img src="greenbutton.png" />
+          <figure className="image">
+           <div className="lostbuttons green">
+           </div>
           </figure>
         </div>
 
@@ -132,6 +134,7 @@ class Home extends React.Component {
         <head>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
           <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+          <link rel="stylesheet" type="text/css" href="/main.css" />
         </head>
         <body className="has-background-info">  
           <section className="hero is-info is-fullheight">
@@ -167,6 +170,7 @@ class Home extends React.Component {
             <div className="hero-foot">
             </div>
           </section>
+          <script src="script.js"></script>
         </body>
       </html>
     );

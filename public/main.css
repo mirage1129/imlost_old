@@ -1,0 +1,21 @@
+.green { 
+/*	height: 135px;
+	width: 135px;
+	background-size: contain;*/
+	background-image: url("/images/greenbutton.png");
+}
+
+.red { 
+/*	height: 135px;
+	width: 135px;
+	background-size: contain;*/
+	background-image: url("/images/redbutton.png");
+}
+
+.lostbuttons { 
+	height: 135px;
+	width: 135px;
+	background-size: contain;
+ }
+
+ /*<img src="greenbutton.png" />*/
