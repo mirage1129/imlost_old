@@ -5,18 +5,18 @@ class Content extends React.Component {
     return(
 
       <div className="columns is-vcentered">
-        <div className="column is-3">
+        <div className="column is-4 is-offset-2">
           <figure className="image">
-           <div className="lostbuttons red">
+           <div className="lostbutton green">
            </div>
           </figure>
         </div>
-        <div className="column is-3">
+        {/*<div className="column is-3">
           <figure className="image">
            <div className="lostbuttons green">
            </div>
           </figure>
-        </div>
+        </div> */}
 
         <div className="column">
           <div className="box">
@@ -170,7 +170,7 @@ class Home extends React.Component {
             <div className="hero-foot">
             </div>
           </section>
-          <script src="script.js"></script>
+          <script src="/script.js"></script>
         </body>
       </html>
     );
