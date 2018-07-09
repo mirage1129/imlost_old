@@ -11,13 +11,6 @@ class Content extends React.Component {
            </div>
           </figure>
         </div>
-        {/*<div className="column is-3">
-          <figure className="image">
-           <div className="lostbuttons green">
-           </div>
-          </figure>
-        </div> */}
-
         <div className="column">
           <div className="box">
             <h1 className="is-size-3">Questions</h1>

@@ -1,4 +1,5 @@
 const Classroom = require('./ModelClassroom');
+const User = require('./ModelUser');
 
 function createClass(request, response) {
   //sets the classname entered in form to classname variable  
@@ -8,8 +9,8 @@ function createClass(request, response) {
 
 //if error === true
     if(error ){
-      response.send('hey this is broken');
-      //TODO: change this to a redirect later XXXXXXXXXXXXXXXXXXXXXXXX
+      response.send('hey this class is already taken! Wait 12 hours!');
+      //TODO: change this to a pop ul message later XXXXXXXXXXXXXXXXXXXXXXXX
       //response.redirect('/');
     
     } else {
@@ -20,11 +21,6 @@ function createClass(request, response) {
   Classroom.createClass(classname, callback);
 }
 
-
-// let userCookie = request.cookies[classname + '_id'];
-
-// if( userCookie === undefined ) {
-//    }
 
 function renderClassroom(request, response) {
   //sets the classname entered in browser to classname variable
@@ -38,11 +34,10 @@ function renderClassroom(request, response) {
           response.render('Classroom');
 
       } else {
-        response.redirect('/');
-        //if there is no result for a classroom then inform the users there is no class XXXXXXXXXXXXXXXXXXXXXXXXX put an alert to the user here
+        response.send('hey this class doesnt exist!');
       }
     }
-    Classroom.createUser(classname, callback);
+    User.createUser(classname, callback);
   }
 
 
@@ -52,8 +47,10 @@ function directToClassroom(request, response) {
    }
 
 
+
+
 module.exports = {
-  createClass,
+  createClass: createClass,
   renderClassroom: renderClassroom,
   directToClassroom: directToClassroom
 }
