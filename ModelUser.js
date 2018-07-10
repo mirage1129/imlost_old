@@ -58,6 +58,8 @@ function createUser(classname, callback) {
   });
 };
 
+//go into the database and do the stuff
+
 
 module.exports = {
   findUser: findUser,

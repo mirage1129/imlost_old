@@ -162,7 +162,7 @@ class Layout extends React.Component {
             <div className="hero-foot">
             </div>
           </section>
-          <script src="/script.js"></script>
+          <script src="/user_script.js"></script>
         </body>
       </html>
     );

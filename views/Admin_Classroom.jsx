@@ -7,8 +7,8 @@ class Admin_Classroom extends React.Component {
       <div className="columns is-vcentered">
         <div className="column is-4 is-offset-2">
           <figure className="image">
-           <div className="lostNumber">
-            <h1>Testing</h1>
+           <div>
+            <h1 className="lostNumber">Testing</h1>
            </div>
           </figure>
         </div>
@@ -45,7 +45,6 @@ class Admin_Classroom extends React.Component {
                 </div>
               </article>
             </div>
-
 
 
 
@@ -166,7 +165,7 @@ class Layout extends React.Component {
             <div className="hero-foot">
             </div>
           </section>
-          <script src="/script.js"></script>
+          <script src="/admin_script.js"></script>
         </body>
       </html>
     );

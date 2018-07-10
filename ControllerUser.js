@@ -9,14 +9,15 @@ function updateLostStatus(request, response) {
   function callback(error, insertResult) {    
 	
   	 if(error ){
-      response.send('hey we couldn\'t update the status!');
+        response.send('hey we couldn\'t update the status!');
     	} else {
-    	response.status(200);
+    	 response.status(200);
     	}  
 	}
 	
 	User.updateLostStatus(id, callback);
 }
+
 
 
 module.exports = {

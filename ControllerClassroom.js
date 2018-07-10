@@ -15,7 +15,7 @@ function createClass(request, response) {
     
     } else {
       response.cookie('admin', classname);
-      response.render('Admin_Classroom');
+      response.redirect('/admin/' + classname);
      //response.redirect('/' + classname)
     } 
   }
@@ -46,14 +46,35 @@ function renderClassroom(request, response) {
 
 function directToClassroom(request, response) {
     let classname = request.query.inclass;
-    response.redirect("/" + classname);
+    response.redirect('/' + classname);
    }
 
+
+function sumLostUsers(request, response) {
+    
+  let classname = request.cookies['admin'];
+
+  let callback = function(err, count) {
+    if (err) { 
+      response.send('theres an error from the database')
+    } else {
+      response.send(count);
+    }
+  }
+
+  Classroom.sumLostUsers(classname, callback);
+ }
+
+function renderAdminClassroom(request, response) {
+    response.render('Admin_Classroom');
+   }
 
 
 
 module.exports = {
   createClass: createClass,
   renderClassroom: renderClassroom,
-  directToClassroom: directToClassroom
+  directToClassroom: directToClassroom,
+  sumLostUsers: sumLostUsers,
+  renderAdminClassroom: renderAdminClassroom
 }
