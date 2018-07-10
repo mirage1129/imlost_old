@@ -43,7 +43,7 @@ class LoginFormTwo extends React.Component {
     )}
   }
 
-class Home extends React.Component {
+class Layout extends React.Component {
   render() {
    return (
       <html>
@@ -85,4 +85,4 @@ class Home extends React.Component {
   }
 }
 
-module.exports = Home;
+module.exports = Layout;

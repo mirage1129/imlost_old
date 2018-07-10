@@ -15,7 +15,8 @@ function createClass(request, response) {
     
     } else {
       response.cookie('admin', classname);
-      response.redirect("/" + classname);
+      response.render('Admin_Classroom');
+     //response.redirect('/' + classname)
     } 
   }
   Classroom.createClass(classname, callback);
@@ -31,7 +32,9 @@ function renderClassroom(request, response) {
       if (result !== false) {
           
           response.cookie(classname + '_id', result[0].id);
-          response.render('Classroom');
+          response.cookie('className', classname);
+          response.cookie('id', result[0].id);
+          response.render('User_Classroom');
 
       } else {
         response.send('hey this class doesnt exist!');

@@ -8,3 +8,7 @@
  .green {
 	background-image: url("/images/greenbutton.png");
 }
+
+.lostNumber { 
+	color:purple;
+ }

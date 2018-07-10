@@ -1,9 +1,8 @@
 var React = require("react");
 
-class Content extends React.Component {
+class User_Classroom extends React.Component {
   render() {
     return(
-
       <div className="columns is-vcentered">
         <div className="column is-4 is-offset-2">
           <figure className="image">
@@ -120,7 +119,7 @@ class Content extends React.Component {
   }
 }
 
-class Home extends React.Component {
+class Layout extends React.Component {
   render() {
    return (
       <html>
@@ -157,7 +156,7 @@ class Home extends React.Component {
 
             <div className="hero-body">
               <div className="container">
-                <Content />
+                <User_Classroom />
               </div>
             </div>
             <div className="hero-foot">
@@ -170,4 +169,4 @@ class Home extends React.Component {
   }
 }
 
-module.exports = Home;
+module.exports = Layout;
