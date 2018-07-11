@@ -1,5 +1,5 @@
 const pg = require('pg');
-
+var configs;
 //require the url library
 //this comes with node, so no need to yarn add
 const url = require('url');
@@ -8,12 +8,12 @@ const url = require('url');
 if( process.env.DATABASE_URL ){
 
   //we need to take apart the url so we can set the appropriate configs
-
+console.log('one')
   const params = url.parse(process.env.DATABASE_URL);
   const auth = params.auth.split(':');
 
   //make the configs object
-  var configs = {
+  configs = {
     user: auth[0],
     password: auth[1],
     host: params.hostname,
@@ -23,17 +23,21 @@ if( process.env.DATABASE_URL ){
   };
 
 }else{
-
+  console.log('two')
   //otherwise we are on the local network
-  const config = {
+  configs = {
 	  user: 'meraj',
 	  host: '127.0.0.1',
 	  database: 'imlost',
-	  port: 5432,
+	  port: 5432
 	};
 }
 
 //this is the same
+console.log("starting", configs );
 const db = new pg.Pool(configs);
+db.on('error', function(error, client) {
 
+  console.log('On the startup of the app')
+})
 module.exports = db;

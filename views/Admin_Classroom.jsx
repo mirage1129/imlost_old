@@ -5,12 +5,8 @@ class Admin_Classroom extends React.Component {
     return(
 
       <div className="columns is-vcentered">
-        <div className="column is-4 is-offset-2">
-          <figure className="image">
-           <div>
-            <h1 className="lostNumber is-size-4"></h1>
-           </div>
-          </figure>
+        <div className="column is-6 has-text-centered">
+            <h1 className="lostNumber is-size-1 has-text-danger has-text-weight-bold"></h1>
         </div>
         <div className="column">
           <div className="box">
@@ -137,7 +133,7 @@ class Layout extends React.Component {
               <header className="navbar">
                 <div className="container">
                   <div className="navbar-brand">
-                    <a className="navbar-item">
+                    <a className="navbar-item" href='/'>
                       <img src="compass.jpg" alt="Logo" />
                     </a>
                     <span className="navbar-burger burger" data-target="navbarMenuHeroC">

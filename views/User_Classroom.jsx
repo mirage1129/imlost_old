@@ -134,7 +134,7 @@ class Layout extends React.Component {
               <header className="navbar">
                 <div className="container">
                   <div className="navbar-brand">
-                    <a className="navbar-item">
+                    <a className="navbar-item" href='/'>
                       <img src="compass.jpg" alt="Logo" />
                     </a>
                     <span className="navbar-burger burger" data-target="navbarMenuHeroC">
