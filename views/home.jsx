@@ -1,12 +1,12 @@
 var React = require("react");
 
+// testing for git 
 class LoginFormOne extends React.Component {
   render() {
     return(
     <form action="/" method="POST">
       <div className="columns">
         <div className="column is-one-third is-offset-one-third">
-          
           <div className="field has-addons">
             <div className="control">
               <input name="name" className="input has-text-centered" type="text" placeholder="type class name" />
