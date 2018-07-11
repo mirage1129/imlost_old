@@ -21,7 +21,7 @@ require('./Routes')(app);
 const Classroom = require('./ModelClassroom');
 
 app.get('/', (request, response) => {
-  response.render('Home');
+  response.render('home');
 });
 
 
