@@ -7,7 +7,7 @@ function findClass(className, callback) {
 // do a query which searches classrooms with a particular name and then runs a callback which takes in the result
     db.query(queryString, values, (err, result) => {
       if(err) {
-        response.send('db error: ' + err.message);
+        callback('db error: ' + err.message);
       } else {
         callback(err, result);
       }

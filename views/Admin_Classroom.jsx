@@ -8,7 +8,7 @@ class Admin_Classroom extends React.Component {
         <div className="column is-4 is-offset-2">
           <figure className="image">
            <div>
-            <h1 className="lostNumber">Testing</h1>
+            <h1 className="lostNumber is-size-4"></h1>
            </div>
           </figure>
         </div>
