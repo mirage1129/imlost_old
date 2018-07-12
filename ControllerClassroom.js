@@ -1,12 +1,10 @@
 const Classroom = require('./ModelClassroom');
 const User = require('./ModelUser');
 
-function createClass(request, response) {
-  //sets the classname entered in form to classname variable  
+function createClass(request, response) { 
   let classname = request.body.name;
 
   function callback(error, insertResult) {
-
 //if error === true
     if(error ){
       response.send('hey this class is already taken! Wait 12 hours!');
@@ -23,6 +21,7 @@ function createClass(request, response) {
 }
 
 
+
 function renderClassroom(request, response) {
   //sets the classname entered in browser to classname variable
   let classname = request.params.classname;
@@ -34,7 +33,9 @@ function renderClassroom(request, response) {
           response.cookie(classname + '_id', result[0].id);
           response.cookie('className', classname);
           response.cookie('id', result[0].id);
-          response.render('User_Classroom');
+          console.log('is this running?');
+          response.render('User_Classroom', {classname: classname});
+
 
       } else {
         response.send('hey this class doesnt exist!');
@@ -44,10 +45,12 @@ function renderClassroom(request, response) {
   }
 
 
+
 function directToClassroom(request, response) {
     let classname = request.query.inclass;
     response.redirect('/' + classname);
    }
+
 
 
 function sumLostUsers(request, response) {
@@ -65,9 +68,23 @@ function sumLostUsers(request, response) {
   Classroom.sumLostUsers(classname, callback);
  }
 
+
+
 function renderAdminClassroom(request, response) {
     response.render('Admin_Classroom');
    }
+
+
+
+function postQuestion(request, response) {
+    
+    let callback = function(err, result) { 
+      console.log('its working');
+      response.send('we got your question')
+    }
+
+  Classroom.insertQuestion(callback);
+}
 
 
 
@@ -76,5 +93,6 @@ module.exports = {
   renderClassroom: renderClassroom,
   directToClassroom: directToClassroom,
   sumLostUsers: sumLostUsers,
-  renderAdminClassroom: renderAdminClassroom
+  renderAdminClassroom: renderAdminClassroom,
+  postQuestion: postQuestion
 }

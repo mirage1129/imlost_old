@@ -104,13 +104,15 @@ class User_Classroom extends React.Component {
                 </div>
               </article>
             </div>
-
-
+            <form method="POST" action={'/' + this.props.classname}>
             <div className="control">
-              <textarea className="textarea" type="text" placeholder="type in your question"></textarea>
+              <textarea className="textarea" name="question" type="text" placeholder="type in your question"></textarea>
             </div>
-
-
+            <br/>
+            <p className="control">
+               <input className="button is-info" value="post question" type="submit" />
+            </p>
+            </form>
           </div>
         </div>
       </div>
@@ -124,6 +126,7 @@ class Layout extends React.Component {
    return (
       <html>
         <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
           <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
           <link rel="stylesheet" type="text/css" href="/main.css" />
@@ -156,7 +159,7 @@ class Layout extends React.Component {
 
             <div className="hero-body">
               <div className="container">
-                <User_Classroom />
+                <User_Classroom classname={this.props.classname}/>
               </div>
             </div>
             <div className="hero-foot">

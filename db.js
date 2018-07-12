@@ -8,7 +8,6 @@ const url = require('url');
 if( process.env.DATABASE_URL ){
 
   //we need to take apart the url so we can set the appropriate configs
-console.log('one')
   const params = url.parse(process.env.DATABASE_URL);
   const auth = params.auth.split(':');
 
@@ -23,7 +22,6 @@ console.log('one')
   };
 
 }else{
-  console.log('two')
   //otherwise we are on the local network
   configs = {
 	  user: 'meraj',
@@ -34,10 +32,8 @@ console.log('one')
 }
 
 //this is the same
-console.log("starting", configs );
 const db = new pg.Pool(configs);
 db.on('error', function(error, client) {
 
-  console.log('On the startup of the app')
 })
 module.exports = db;

@@ -123,6 +123,7 @@ class Layout extends React.Component {
    return (
       <html>
         <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
           <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
           <link rel="stylesheet" type="text/css" href="/main.css" />
@@ -134,7 +135,7 @@ class Layout extends React.Component {
                 <div className="container">
                   <div className="navbar-brand">
                     <a className="navbar-item" href='/'>
-                      <img src="compass.jpg" alt="Logo" />
+                      <img src="/images/compass_copy.jpg" alt="Logo" />
                     </a>
                     <span className="navbar-burger burger" data-target="navbarMenuHeroC">
                       <span></span>

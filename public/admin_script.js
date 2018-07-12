@@ -1,3 +1,4 @@
+window.onload = function() { 
 
 let displayLostUsers = function() { 
 
@@ -5,7 +6,7 @@ let displayLostUsers = function() {
 
 		let lostNumber = document.querySelector('.lostNumber');
 		lostNumber.innerText = this.responseText;
-		  console.log("response text", this.responseText);
+		  // console.log("response text", this.responseText);
 		  // console.log( response );
 		};
 
@@ -15,7 +16,7 @@ let displayLostUsers = function() {
 	request.send();
 }	
 
-//do a window onload
-displayLostUsers();
-
+  
+    setInterval(function(){ displayLostUsers();}, 1000);
+}
 

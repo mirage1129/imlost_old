@@ -7,10 +7,10 @@ function setupRoutes(app) {
   app.get('/youare', classroom.directToClassroom);
   app.get('/admin/:classname', classroom.renderAdminClassroom);
   app.get('/lostsum', classroom.sumLostUsers);
+  
   app.get('/:classname', classroom.renderClassroom);
   app.put('/:classname', user.updateLostStatus);
-  
-  // new route for the ajax call
+  app.post('/:classname', classroom.postQuestion);
 };
 
 module.exports = setupRoutes;

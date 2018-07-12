@@ -15,6 +15,7 @@ function findClass(className, callback) {
 }
 
 
+
 function createClass(className, callback) {
   //searches for a class
   findClass(className, function (findError, findResult) {
@@ -34,14 +35,12 @@ function createClass(className, callback) {
 };
 
 
+
 function sumLostUsers(classname, callback) {
   let queryString = 'SELECT count(CASE WHEN lost THEN 1 END) FROM users WHERE classname = $1';
   let values = [classname];
 
   db.query(queryString, values, (err, result) => { 
-    console.log('error: ', err);
-    console.log('result: ', result);
-    // if (result.rows)
     if (result === undefined) { 
       callback(err);
     } else {
@@ -50,23 +49,27 @@ function sumLostUsers(classname, callback) {
   })
 }
 
-// function sumLostUsers(className, callback) {
-//     let queryString = 'SELECT count(CASE WHEN lost THEN 1 END) FROM users WHERE name = $1';
 
-//     let values = ['className']
-// // do a query which searches classrooms with a particular name and then runs a callback which takes in the result
-//     db.query(queryString, values, (err, result) => {
-//       if(err) {
-//         response.send('db error: ' + err.message);
-//       } else {
-//         callback(err, result);
-//       }
-//     })
-// }
+function insertQuestion(callback) {
+  let queryString = 'SELECT name from classrooms where id = $1';
+  let values = ['45'];
+
+  db.query(queryString, values, (err, result) => { 
+    if (result === undefined) { 
+      callback(err);
+    } else {
+      console.log(result.rows);
+      callback(err, result.rows[0]);
+    }
+  })
+}
+
+
+
 
 module.exports = {
   findClass: findClass,
   createClass: createClass,
-  sumLostUsers: sumLostUsers
-
+  sumLostUsers: sumLostUsers,
+  insertQuestion: insertQuestion
 }

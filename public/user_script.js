@@ -5,7 +5,7 @@ lostbutton.onclick = function(){
 
 //api call for the PUT request to change the user status in the database when someone clicks the button
 	let responseHandler = function() {
-	  console.log("response text", this);
+	  // console.log("response text", this);
 	  // var response = JSON.parse( this.responseText );
 	  // console.log( response );
 	};
